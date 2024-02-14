@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>World Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/public/css/map3.css">
+</head>
+
+<body>
+
+<div class="maincontainer">
+
+
+    <div class="search-container">
+        <div class="text-container">
+        <input type="text" id="countryInput" list="countryList" placeholder="Enter country name">
+        <div id="suggestionWrapper">
+            <datalist id="countryList">
+
+            </datalist>
+        </div>
+        <button id="searchBtn">Search</button>
+    </div>
+    </div>
+
+
+ 
+    <div class="openingcontainer">
+    <h1> Welcome to the Future </h1>
+    <div id="map" class="map-container">
+        </div>
+    </div>
+
+    <div id="countryInfo" class="info-card">
+        <h2>Country Information</h2>
+        <p id="countryName">Country: </p>
+        <p id="latitude">Latitude: </p>
+        <p id="longitude">Longitude: </p>
+        <button id="predictBtn" onclick="/views/get_prediction.html">Get Predictions</button>
+    </div>
+
+
+</div>
+
+    
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>     
+    <script src="/public/js/map3.js"></script>
+</body>
+
+</html>
